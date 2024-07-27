@@ -1,9 +1,7 @@
 require('dotenv').config()
 const cors = require('cors');
 
-app.use(cors({
-  origin: "https://mren.netlify.app"
-}));
+
 
 const express = require('express')
 const mongoose = require('mongoose')
@@ -11,6 +9,10 @@ const workoutRoutes = require('./routes/workouts')
 
 // express app
 const app = express()
+
+app.use(cors({
+  origin: "https://mren.netlify.app"
+}));
 
 // middleware
 app.use(express.json())
