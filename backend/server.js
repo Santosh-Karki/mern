@@ -10,12 +10,15 @@ const workoutRoutes = require('./routes/workouts')
 // express app
 const app = express()
 
-app.use(cors({
-  origin: "https://mren.netlify.app/"
-}));
 
 // middleware
 app.use(express.json())
+
+
+app.use(cors({
+  origin: ["https://mren.netlify.app"],
+  credentials: true
+}));
 
 app.use((req, res, next) => {
   console.log(req.path, req.method)
