@@ -2,7 +2,7 @@ require('dotenv').config()
 const cors = require('cors');
 
 app.use(cors({
-  origin: "https://66a48ac82dc48200085f1b7d--mren.netlify.app/"
+  origin: "https://mren.netlify.app"
 }));
 
 const express = require('express')
